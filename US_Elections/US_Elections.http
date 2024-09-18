@@ -1,0 +1,25 @@
+@US_Elections_HostAddress = http://localhost:5132
+
+# Get All Years for the US Elections
+GET {{US_Elections_HostAddress}}/api/elections/years
+Accept: application/json
+
+###
+
+# Get Election Details by Year
+GET {{US_Elections_HostAddress}}/api/elections/2020
+Accept: application/json
+
+###
+
+# Get All US States
+GET {{US_Elections_HostAddress}}/api/states
+Accept: application/json
+
+###
+
+# Get State Information by Abbreviation
+GET {{US_Elections_HostAddress}}/api/states/AL
+Accept: application/json
+
+###
