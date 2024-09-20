@@ -19,10 +19,16 @@
 
         // get all election years
         [HttpGet("years")]
-        public ActionResult<IEnumerable<int>> GetAllYears()
+        public ActionResult<IEnumerable<YearModel>> GetAllYears()
         {
             IEnumerable<int> years = _service.GetAllYears();
-            return Ok(years);
+
+            List<YearModel> yearResults = years.Select(year => new YearModel
+            {
+                Year = year
+            }).ToList();
+
+            return Ok(yearResults);
         }
 
         // get election data by year
@@ -50,10 +56,16 @@
 
         // get all states
         [HttpGet("states-abbreviation")]
-        public ActionResult<IEnumerable<string>> GetAllStates()
+        public ActionResult<IEnumerable<StateAbbreviation>> GetAllStates()
         {
             IEnumerable<string> states = _service.GetAllStates();
-            return Ok(states);
+
+            var stateResults = states.Select(state => new StateAbbreviation
+            {
+                State = state
+            }).ToList();
+
+            return Ok(stateResults);
         }
 
         // get state information by abbreviation
