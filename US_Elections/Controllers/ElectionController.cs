@@ -36,7 +36,7 @@
             List<Candidate> candidates = election.Candidates;
             foreach (var candidate in candidates)
             {
-                candidate.ImageFull = $"{Request.Scheme}://{Request.Host}{candidate.Image}";
+                candidate.ImageFull = $"https://{Request.Host}{candidate.Image}";
             }
 
             List<State> states = election.States;
@@ -78,7 +78,7 @@
             {
                 return NotFound();
             }
-            candidate.ImageFull = $"{Request.Scheme}://{Request.Host}{candidate.Image}";
+            candidate.ImageFull = $"https://{Request.Host}{candidate.Image}";
             return Ok(candidate);
         }
 
@@ -91,7 +91,7 @@
             {
                 return NotFound();
             }
-            candidate.ImageFull = $"{Request.Scheme}://{Request.Host}{candidate.Image}";
+            candidate.ImageFull = $"https://{Request.Host}{candidate.Image}";
             return Ok(candidate);
         }
 
