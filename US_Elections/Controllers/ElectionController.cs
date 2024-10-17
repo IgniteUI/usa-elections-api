@@ -1,6 +1,7 @@
 ﻿namespace US_Elections.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using System.Globalization;
     using US_Elections.Models;
     using US_Elections.Services;
 
@@ -169,7 +170,7 @@
 
             var voteCountResult = new VoteCountResult
             {
-                Votes = votes
+                Votes = votes.ToString("N0", CultureInfo.InvariantCulture) // Based on US-style formating
             };
 
             return Ok(voteCountResult);
@@ -183,7 +184,7 @@
 
             var voteCountResult = new VoteCountResult
             {
-                Votes = votes
+                Votes = votes.ToString("N0", CultureInfo.InvariantCulture)  // Based on US-style formating
             };
 
             return Ok(voteCountResult);

@@ -2,6 +2,6 @@
 {
     public class VoteCountResult
     {
-        public int Votes { get; set; }
+        public string Votes { get; set; }
     }
 }
