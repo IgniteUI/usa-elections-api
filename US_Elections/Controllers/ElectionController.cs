@@ -170,7 +170,7 @@
 
             var voteCountResult = new VoteCountResult
             {
-                Votes = votes.ToString("N0", CultureInfo.InvariantCulture) // Based on US-style formating
+                Votes = votes.ToString("N0", CultureInfo.InvariantCulture) // Based on US-style formatting
             };
 
             return Ok(voteCountResult);
@@ -184,7 +184,7 @@
 
             var voteCountResult = new VoteCountResult
             {
-                Votes = votes.ToString("N0", CultureInfo.InvariantCulture)  // Based on US-style formating
+                Votes = votes.ToString("N0", CultureInfo.InvariantCulture)  // Based on US-style formatting
             };
 
             return Ok(voteCountResult);
