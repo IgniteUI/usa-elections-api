@@ -28,3 +28,5 @@ The election data is sourced from publicly available datasets and historical ele
 - **`GET /popular-votes/{year}/{party}`** 
 - **`GET /popular-votes/{year}/by-state`** 
 - **`GET /votes/{year}/by-candidate`** 
+
+## Docker instructions
